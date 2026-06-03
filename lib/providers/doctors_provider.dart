@@ -9,9 +9,7 @@ final doctorsProvider = Provider<List<DoctorModel>>((ref) {
 
 final searchQueryProvider = StateProvider<String>((ref) => '');
 
-final selectedCategoryProvider = StateProvider<String?>(
-  (ref) => null,
-); // 'الكل'
+final selectedCategoryProvider = StateProvider<String?>((ref) => 'الكل');
 
 final filteredDoctorsProvider = Provider<List<DoctorModel>>((ref) {
   final doctors = ref.watch(doctorsProvider);
@@ -20,7 +18,7 @@ final filteredDoctorsProvider = Provider<List<DoctorModel>>((ref) {
 
   return doctors.where((doctor) {
     final matchesCategory =
-        selectedCategory == null || doctor.specialty == selectedCategory;
+        selectedCategory == 'الكل' || doctor.specialty == selectedCategory;
     final matchesSearch =
         doctor.dname.toLowerCase().contains(searchQuery) ||
         doctor.specialty.toLowerCase().contains(searchQuery);

@@ -95,8 +95,8 @@ class _BookingConfirmationState extends ConsumerState<BookingConfirmation> {
         final confirmNotif = NotificationModel(
           id: 'CONF_${DateTime.now().millisecondsSinceEpoch}',
           userId: user.uid,
-          title: '📆 تأكيد الحجز',
-          body: 'تم حجز موعدك مع ${widget.doctor.dname} بنجاح. ',
+          title: '📆 تأكيد ارسال الحجز',
+          body: 'تم ارسال طلب حجز موعد مع ${widget.doctor.dname} بنجاح. ',
           createdAt: DateTime.now(),
         );
 

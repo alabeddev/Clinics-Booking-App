@@ -37,7 +37,9 @@ final bookedTimesProvider = StreamProvider.family
 
               if (data['date'] != null) {
                 final dateString = doc.data()['date'] as String;
-                final bookingDateTime = DateTime.parse(dateString);
+                final bookingDateTime = DateTime.tryParse(dateString);
+                if (bookingDateTime == null) continue;
+
                 final status = (data['status'] ?? '').toString().trim();
 
                 if (bookingDateTime.year == params.date.year &&

@@ -1,29 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/legacy.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class LocaleNotifier extends StateNotifier<Locale> {
-  LocaleNotifier() : super(const Locale('ar')) {
+class LocaleNotifier extends Notifier<Locale> {
+  @override
+  Locale build() {
     _loadSavedLocale();
+    return Locale('ar');
   }
 
   Future<void> _loadSavedLocale() async {
-    final prefs = await SharedPreferences.getInstance();
-    final savedLanguageCode = prefs.getString('app_language');
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final savedLanguageCode = prefs.getString('app_language');
 
-    if (savedLanguageCode != null) {
-      state = Locale(savedLanguageCode);
+      if (savedLanguageCode != null) {
+        state = Locale(savedLanguageCode);
+      }
+    } catch (e) {
+      debugPrint('خطأ في تحميل اللغة المحفوظة: $e');
     }
   }
 
   Future<void> changeLocale(String languageCode) async {
     state = Locale(languageCode);
 
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('app_language', languageCode);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('app_language', languageCode);
+    } catch (e) {
+      debugPrint('خطأ في تغيير اللغة: $e');
+    }
   }
 }
 
-final localeProvider = StateNotifierProvider<LocaleNotifier, Locale>((ref) {
-  return LocaleNotifier();
-});
+final localeProvider = NotifierProvider<LocaleNotifier, Locale>(
+  LocaleNotifier.new,
+);

@@ -1,12 +1,25 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:clinics_booking/providers/user_provider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:clinics_booking/models/notification.dart';
 import 'package:clinics_booking/data/database.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
-class NotificationsNotifier extends StateNotifier<List<NotificationModel>> {
-  NotificationsNotifier() : super([]);
+class NotificationsNotifier extends Notifier<List<NotificationModel>> {
+  @override
+  List<NotificationModel> build() {
+    ref.listen(authStateProvider, (previous, next) {
+      next.whenData((user) {
+        if (user != null) {
+          loadNotifications(user.uid);
+        } else {
+          clearNotifications();
+        }
+      });
+    }, fireImmediately: true);
+    return [];
+  }
 
   Future<void> loadNotifications(String uid) async {
     final dbNotification = await DatabaseHelper.instance.getUserNotifications(
@@ -23,13 +36,18 @@ class NotificationsNotifier extends StateNotifier<List<NotificationModel>> {
           .orderBy('createdAt', descending: true)
           .get();
 
-      final cloudNotifications = snapshot.docs.map((doc) {
-        return NotificationModel.fromMap(doc.data());
-      }).toList();
+      final List<NotificationModel> cloudNotifications = [];
+      for (var doc in snapshot.docs) {
+        final notification = NotificationModel.fromMap(doc.data());
+
+        await DatabaseHelper.instance.insertNotification(notification);
+
+        cloudNotifications.add(notification);
+      }
 
       state = cloudNotifications;
     } catch (e) {
-      print('خطأ في جلب الأشعارات السحابية $e ');
+      debugPrint('خطأ في جلب الأشعارات السحابية $e ');
     }
   }
 
@@ -49,7 +67,7 @@ class NotificationsNotifier extends StateNotifier<List<NotificationModel>> {
           .doc(notification.id)
           .set(notification.toMap());
     } catch (e) {
-      print('خطأ في رفع الاشعار الى السحابة$e');
+      debugPrint('خطأ في رفع الاشعار الى السحابة$e');
     }
   }
 
@@ -68,24 +86,18 @@ class NotificationsNotifier extends StateNotifier<List<NotificationModel>> {
           .doc(notificationId)
           .delete();
     } catch (e) {
-      print('خطأ في حذف الأشعار من السحابة : $e');
+      debugPrint('خطأ في حذف الأشعار من السحابة : $e');
     }
+  }
+
+  void clearNotifications() {
+    state = [];
   }
 }
 
 final notificationProvider =
-    StateNotifierProvider<NotificationsNotifier, List<NotificationModel>>((
-      ref,
-    ) {
-      final authState = ref.watch(authStateProvider);
-      final notifier = NotificationsNotifier();
-
-      authState.whenData((user) {
-        if (user != null) {
-          notifier.loadNotifications(user.uid);
-        }
-      });
-      return notifier;
-    });
+    NotifierProvider<NotificationsNotifier, List<NotificationModel>>(
+      NotificationsNotifier.new,
+    );
 
 final unreadBadgeProvider = StateProvider<bool>((ref) => false);
