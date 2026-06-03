@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "433297876025",
+    "project_id": "p-doctors-clinics",
+    "storage_bucket": "p-doctors-clinics.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433297876025:android:448cb08f475a7f0dc899e8",
+        "android_client_info": {
+          "package_name": "com.clinics.clinics_booking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5nHis-dNHK9e-LZcZERnSMry8WEEhz-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433297876025:android:5aa410f3ed7f5b7ac899e8",
+        "android_client_info": {
+          "package_name": "com.doctors.my_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5nHis-dNHK9e-LZcZERnSMry8WEEhz-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433297876025:android:c9e4415e9ab2f5c7c899e8",
+        "android_client_info": {
+          "package_name": "com.example.my_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5nHis-dNHK9e-LZcZERnSMry8WEEhz-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

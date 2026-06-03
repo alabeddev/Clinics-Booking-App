@@ -1,0 +1,154 @@
+{
+  "@@locale": "ar",
+  "welcome": "مرحباً بك",
+  "newuser": "مستخدم جديد",
+  "medicalSpecialties": "التخصصات الطبية",
+  "availableDoctors": "الأطباء المتاحون",
+  "searchHere": "ابحث هنا",
+  "searchDoctorOrSpecialty": "ابحث عن طبيب أو تخصص",
+  "home": "الرئيسية",
+  "bookings": "الحجوزات",
+  "myAccount": "حسابي",
+  "doctorDetails": "تفاصيل الدكتور",
+  "clinicLocation": "موقع العيادة",
+  "availableTimes": "الأوقات المتاحة",
+  "bookingPrice": "سعر الحجز",
+  "aboutDoctor": "نبذة عن الطبيب",
+  "selectBookingDate": "اختر موعد الحجز",
+  "selectDay": "اختر اليوم",
+  "selectHour": "اختر الساعة",
+  "continueBooking": "متابعة الحجز",
+  "confirmBooking": "تأكيد الحجز",
+  "appointmentSummary": "ملخص الموعد",
+  "doctor": "الطبيب",
+  "specialty": "التخصص",
+  "location": "الموقع",
+  "bookingDate": "تاريخ الحجز",
+  "hour": "الساعة",
+  "paymentDetails": "تفاصيل الدفع",
+  "bookingFees": "رسوم الحجز",
+  "clinicNotesOptional": "ملاحظات للعيادة (اختياري)",
+  "chronicDiseasesNote": "اكتب هنا اذا كنت تعاني من أمراض مزمنة أو أي ملاحظة",
+  "sendingBookingRequest": "جاري ارسال طلب الحجز",
+  "bookingRequestSentSuccess": "تم ارسال طلبك بنجاح",
+  "myAppointments": "مواعيدي",
+  "upcomingAppointments": "المواعيد القادمة",
+  "previousAppointments": "المواعيد السابقة",
+  "cancelAppointment": "الغاء الموعد",
+  "cancelBooking": "الغاء الحجز",
+  "cancelConfirmationMessage": "هل أنت متأكد أنك تريد الغاء هذا الموعد نهائياً؟ لا يمكن التراجع عن هذا",
+  "back": "تراجع",
+  "yesCancel": "نعم، الغاء",
+  "pressAgainToExit": "اضغط مره أخرى للخروج",
+  "pleaseSelectDateFirst": "الرجاء اختيار تاريخ الموعد اولا",
+  "bookingStatus": "حالة الحجز",
+  "profile": "الملف الشخصي",
+  "generalSettings": "الاعدادات العامه",
+  "editProfile": "تعديل البيانات الشخصية",
+  "featureComingSoon": "سيتم تفعيل هذه الميزة قريباً",
+  "language": "اللغة",
+  "chooseAppLanguage": "اختر لغة التطبيق",
+  "notifications": "الاشعارات",
+  "appointmentHistoryEmpty": "سجل المواعيد فارغ",
+  "aboutApp": "عن التطبيق",
+  "noClinicVisitedYet": "لم تقم بزيارة أي عيادة حتى الان",
+  "medicalClinicsBookingSystem": "نظام حجز عيادات طبية",
+  "integratedAppDescription": "تطبيق متكامل لحجز وأداره المواعيد الطبية",
+  "noDoctorsAvailable": "لا يوجد أطباء متاحين حالياً",
+  "close": "أغلاق",
+  "fullName": "الاسم الكامل",
+  "logout": "تسجيل الخروج",
+  "phoneNumber": "رقم الهاتف",
+  "confirmLogout": "هل انت متأكد انك تريد تسجيل الخروج من حسابك؟",
+  "email": "البريد الإلكتروني",
+  "cancel": "الغاء",
+  "password": "كلمة المرور",
+  "confirm": "تأكيد",
+  "noUpcomingAppointments": "لا توجد مواعيد قادمة",
+  "clinicManagementSystem": "نظام أدارة العيادات",
+  "bookNowWithBestDoctors": "أحجز موعدك الآن مع أفضل الأطباء",
+  "login": "تسجيل دخول",
+  "enter": "دخول",
+  "dontHaveAccount": "ليس لديك حساب ؟ إنشاء حساب",
+  "createNewAccount": "إنشاء حساب جديد",
+  "createAccount": "إنشاء الحساب",
+  "alreadyHaveAccount": "لدي حساب بالفعل ؟ تسجيل دخول",
+  "appDevelopmentInfo": "تم تطويره كجزء من مشروع شخصي لتطوير مهاراتي والتعلم، تم تطويره بأستخدام Flutter/Dart والتقنيات المستخدمه Firebase, Riverpod",
+  "pleaseEnterName": "الرجاء ادخال اسم",
+  "nameMinLength": "يجب ان يكون الاسم 3 احرف على الاقل",
+  "pleaseEnterPhone": "الرجاء ادخال رقم الهاتف",
+  "phoneLengthWarning": "رقم الهاتف يجب ان يتكون من 9 ارقام",
+  "pleaseEnterValidEmail": "الرجاء ادخال بريد الكتروني صالح",
+  "pleaseEnterPassword": "الرجاء ادخال كلمه مرور",
+  "passwordMinLength": "كلمه المرور يجب ان لاتقل عن 6 خانات",
+  "arabic": "العربيه",
+  "english": "الانجليزيه",
+  "pm": "م",
+  "am": "ص",
+  "notSpecified": "غير محدد",
+  "unknown": "غير معروف",
+  "doctorNotAvailable": "طبيب غير متوفر",
+  "errorFetchingData": "حدث خطأ في جلب البيانات",
+  "userDataNotFound": "لم يتم العثور على بيانات المستخدم",
+  "errorFetchingTimesCheckInternet": "حدث خطأ في جلب الاوقات، تحقق من اتصالك بالانترنت",
+  "clinicNotes": "ملاحظات للعياده",
+  "pleaseSelectDateAndTimeFirst": "الرجأ أختيار تاريخ ووقت الحجز أولآ",
+  "selectBookingTime": "أختر وقت الحجز",
+  "loginRequiredToBook": "عذرآ، يجب تسجيل الدخول أولآ لأتمام الحجز",
+  "errorReadingAppointmentData": "حدث خطأ في قراءة بيانات الموعد، الرجاء المحاولة مجددا",
+  "pending": "قيد الانتظار",
+  "pendingWithHamza": "قيد الأنتظار",
+  "canceled": "ملغي",
+  "canceledWithMaksoura": "ملغى",
+  "confirmed": "مؤكد",
+  "completed": "مكتمل",
+  "appointmentDetails": "تفاصيل الموعد",
+  "notificationDeleted": "تم حذف الاشعار",
+    "noNotificationsCurrently": "لا توجد إشعارات حالياً",
+    "appointmentAlertsWillAppearHere": "تنبيهات المواعيد ستظهر هنا",
+    "welcomeToOurClinic": "مرحباً بك في عيادتنا 🏥",
+    "welcomeUserMessage": "الأخ {userName}، يسعدنا انضمامك إلينا، نتمنى لك رحلة علاجية مريحة.",
+    "@welcomeUserMessage": {
+      "placeholders": {
+        "userName": {
+          "type": "String"
+        }
+      }
+    },
+    "bookingConfirmationTitle": "تأكيد الحجز 🗓",
+    "bookingRequestedSuccessfully": "تم طلب حجز موعد مع {doctorName} بنجاح.",
+    "@bookingRequestedSuccessfully": {
+      "placeholders": {
+        "doctorName": {
+          "type": "String"
+        }
+      }
+    },
+    "scheduledReminder": "تذكير مجدول ⏰️",
+    "reminderSetSuccessfully": "تم ضبط منبه لتذكيرك بموعد مع {doctorName} قبل ساعتين من الحضور.",
+    "@reminderSetSuccessfully": {
+      "placeholders": {
+        "doctorName": {
+          "type": "String"
+        }
+      }
+    },
+    "upcomingAppointmentReminder": "تذكير بموعدك القادم ⏰️",
+    "appointmentInTwoHours": "لديك موعد مع {doctorName} بعد ساعتين من الآن..",
+    "@appointmentInTwoHours": {
+      "placeholders": {
+        "doctorName": {
+          "type": "String"
+        }
+      }
+    },
+    "immediateAppointmentReminder": "تذكير فوري بموعدك ⏰️",
+    "appointmentVerySoon": "لديك موعد قريباً جداً مع {doctorName}",
+    "@appointmentVerySoon": {
+      "placeholders": {
+        "doctorName": {
+          "type": "String"
+        }
+      }
+    }
+}

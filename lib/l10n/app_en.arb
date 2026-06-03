@@ -1,0 +1,154 @@
+{
+  "@@locale": "en",
+  "welcome": "Welcome",
+  "newuser": "New user",
+  "medicalSpecialties": "Medical Specialties",
+  "availableDoctors": "Available Doctors",
+  "searchHere": "Search here",
+  "searchDoctorOrSpecialty": "Search for a doctor or specialty",
+  "home": "Home",
+  "bookings": "Bookings",
+  "myAccount": "My Account",
+  "doctorDetails": "Doctor Details",
+  "clinicLocation": "Clinic Location",
+  "availableTimes": "Available Times",
+  "bookingPrice": "Booking Price",
+  "aboutDoctor": "About the Doctor",
+  "selectBookingDate": "Select Booking Date",
+  "selectDay": "Select Day",
+  "selectHour": "Select Hour",
+  "continueBooking": "Continue Booking",
+  "confirmBooking": "Confirm Booking",
+  "appointmentSummary": "Appointment Summary",
+  "doctor": "Doctor",
+  "specialty": "Specialty",
+  "location": "Location",
+  "bookingDate": "Booking Date",
+  "hour": "Hour",
+  "paymentDetails": "Payment Details",
+  "bookingFees": "Booking Fees",
+  "clinicNotesOptional": "Clinic Notes (Optional)",
+  "chronicDiseasesNote": "Write here if you suffer from chronic diseases or any other notes",
+  "sendingBookingRequest": "Sending booking request...",
+  "bookingRequestSentSuccess": "Your request has been sent successfully",
+  "myAppointments": "My Appointments",
+  "upcomingAppointments": "Upcoming ",
+  "previousAppointments": "Previous ",
+  "cancelAppointment": "Cancel Appointment",
+  "cancelBooking": "Cancel Booking",
+  "cancelConfirmationMessage": "Are you sure you want to cancel this appointment permanently? This action cannot be undone.",
+  "back": "Back",
+  "yesCancel": "Yes, Cancel",
+  "pressAgainToExit": "Press again to exit",
+  "pleaseSelectDateFirst": "Please select the appointment date first",
+  "bookingStatus": "Booking Status",
+  "profile": "Profile",
+  "generalSettings": "General Settings",
+  "editProfile": "Edit Profile",
+  "featureComingSoon": "This feature will be activated soon",
+  "language": "Language",
+  "chooseAppLanguage": "Choose App Language",
+  "notifications": "Notifications",
+  "appointmentHistoryEmpty": "Appointment history is empty",
+  "aboutApp": "About the App",
+  "noClinicVisitedYet": "You haven't visited any clinic yet",
+  "medicalClinicsBookingSystem": "Medical Clinics Booking System",
+  "integratedAppDescription": "An integrated application for booking and managing medical appointments",
+  "noDoctorsAvailable": "No doctors currently available",
+  "close": "Close",
+  "fullName": "Full Name",
+  "logout": "Log Out",
+  "phoneNumber": "Phone Number",
+  "confirmLogout": "Are you sure you want to log out of your account?",
+  "email": "Email",
+  "cancel": "Cancel",
+  "password": "Password",
+  "confirm": "Confirm",
+  "noUpcomingAppointments": "No upcoming appointments",
+  "clinicManagementSystem": "Clinics Management System",
+  "bookNowWithBestDoctors": "Book your appointment now with the best doctors",
+  "login": "Log In",
+  "enter": "Enter",
+  "dontHaveAccount": "Don't have an account? Sign up",
+  "createNewAccount": "Create a New Account",
+  "createAccount": "Create Account",
+  "alreadyHaveAccount": "Already have an account? Log in",
+  "appDevelopmentInfo": "Developed as part of a personal project to enhance my skills and learn, developed using Flutter/Dart and the technologies used are Firebase, Riverpod",
+  "pleaseEnterName": "Please enter a name",
+  "nameMinLength": "Name must be at least 3 characters",
+  "pleaseEnterPhone": "Please enter a phone number",
+  "phoneLengthWarning": "Phone number must consist of 9 digits",
+  "pleaseEnterValidEmail": "Please enter a valid email",
+  "pleaseEnterPassword": "Please enter a password",
+  "passwordMinLength": "Password must be at least 6 characters",
+  "arabic": "Arabic",
+  "english": "English",
+  "pm": "PM",
+  "am": "AM",
+  "notSpecified": "Not specified",
+  "unknown": "Unknown",
+  "doctorNotAvailable": "Doctor not available",
+  "errorFetchingData": "An error occurred while fetching data",
+  "userDataNotFound": "User data not found",
+  "errorFetchingTimesCheckInternet": "Error fetching times, check your internet connection",
+  "clinicNotes": "Clinic notes",
+  "pleaseSelectDateAndTimeFirst": "Please select the booking date and time first",
+  "selectBookingTime": "Select booking time",
+  "loginRequiredToBook": "Sorry, you must log in first to complete the booking",
+  "errorReadingAppointmentData": "Error reading appointment data, please try again",
+  "pending": "Pending",
+  "pendingWithHamza": "Pending",
+  "canceled": "Canceled",
+  "canceledWithMaksoura": "Canceled",
+  "confirmed": "Confirmed",
+  "completed": "Completed",
+  "appointmentDetails": "Appointment Details",
+  "notificationDeleted": "Notification deleted",
+  "noNotificationsCurrently": "No notifications currently",
+  "appointmentAlertsWillAppearHere": "Appointment alerts will appear here",
+  "welcomeToOurClinic": "Welcome to our clinic 🏥",
+  "welcomeUserMessage": "Dear {userName}, we are glad you joined us. We wish you a comfortable healing journey.",
+  "@welcomeUserMessage": {
+    "placeholders": {
+      "userName": {
+        "type": "String"
+      }
+    }
+  },
+  "bookingConfirmationTitle": "Booking Confirmation 🗓",
+  "bookingRequestedSuccessfully": "An appointment booking with {doctorName} has been requested successfully.",
+  "@bookingRequestedSuccessfully": {
+    "placeholders": {
+      "doctorName": {
+        "type": "String"
+      }
+    }
+  },
+  "scheduledReminder": "Scheduled Reminder ⏰️",
+  "reminderSetSuccessfully": "An alarm has been set to remind you of your appointment with {doctorName} two hours before attendance.",
+  "@reminderSetSuccessfully": {
+    "placeholders": {
+      "doctorName": {
+        "type": "String"
+      }
+    }
+  },
+  "upcomingAppointmentReminder": "Upcoming Appointment Reminder ⏰️",
+  "appointmentInTwoHours": "You have an appointment with {doctorName} in two hours..",
+  "@appointmentInTwoHours": {
+    "placeholders": {
+      "doctorName": {
+        "type": "String"
+      }
+    }
+  },
+  "immediateAppointmentReminder": "Immediate Appointment Reminder ⏰️",
+  "appointmentVerySoon": "You have an appointment very soon with {doctorName}",
+  "@appointmentVerySoon": {
+    "placeholders": {
+      "doctorName": {
+        "type": "String"
+      }
+    }
+  }
+}
