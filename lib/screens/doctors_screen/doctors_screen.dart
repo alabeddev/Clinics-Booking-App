@@ -8,7 +8,6 @@ import 'package:clinics_booking/providers/doctors_provider.dart';
 import 'package:clinics_booking/screens/doctors_screen/widgets/categories_list.dart';
 import 'package:clinics_booking/screens/doctors_screen/widgets/doctor_card.dart';
 import 'package:clinics_booking/l10n/app_localizations.dart';
-//import 'package:clinics_booking/providers/notifications_provider.dart';
 
 class DoctorsScreen extends ConsumerWidget {
   const DoctorsScreen({super.key});

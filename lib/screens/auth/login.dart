@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:clinics_booking/screens/tab.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:clinics_booking/providers/auth_provider.dart';
-//import 'package:clinics_booking/l10n/app_localizations.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});

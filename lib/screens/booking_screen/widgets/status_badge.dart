@@ -28,30 +28,6 @@ class StatusBadge extends StatelessWidget {
       textColor = Colors.red.shade800;
     }
 
-    /* switch (status) {
-      case 'قيد الانتظار':
-      case 'قيد الأنتظار':
-        bgColor = Colors.orange.shade50;
-        textColor = Colors.orange.shade800;
-        break;
-
-      case 'مؤكد':
-      case 'مكتمل':
-        bgColor = Colors.green.shade50;
-        textColor = Colors.green.shade800;
-        break;
-
-      case 'ملغي':
-      case 'ملغى':
-        bgColor = Colors.red.shade50;
-        textColor = Colors.red.shade800;
-        break;
-
-      default:
-        bgColor = Colors.grey.shade100;
-        textColor = Colors.grey.shade800;
-    } */
-
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(

@@ -129,10 +129,9 @@ class BookingCard extends ConsumerWidget {
 
                   const Spacer(),
 
-                  if (booking.status ==
-                          AppLocalizations.of(context)!.canceled ||
-                      booking.status ==
-                          AppLocalizations.of(context)!.canceledWithMaksoura)
+                  if (booking.status == 'Canceled' ||
+                      booking.status == 'ملغي' ||
+                      booking.status == 'ملغى')
                     IconButton(
                       onPressed: () {
                         ref
@@ -149,9 +148,8 @@ class BookingCard extends ConsumerWidget {
                 ],
               ),
 
-              if (booking.status == AppLocalizations.of(context)!.pending ||
-                  booking.status ==
-                      AppLocalizations.of(context)!.pendingWithHamza) ...[
+              if (booking.status == 'Pending' ||
+                  booking.status == 'قيد الانتظار') ...[
                 const SizedBox(height: 20),
 
                 SizedBox(
@@ -240,10 +238,7 @@ class BookingCard extends ConsumerWidget {
                   onPressed: () {
                     ref
                         .read(bookingsProvider.notifier)
-                        .updateBookingStatus(
-                          bookingId,
-                          AppLocalizations.of(context)!.canceled,
-                        );
+                        .updateBookingStatus(bookingId, 'ملغي');
 
                     NotificationService.cancelNotification(bookingId.hashCode);
                     Navigator.of(context).pop();

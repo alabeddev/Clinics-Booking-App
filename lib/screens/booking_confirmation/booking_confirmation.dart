@@ -80,7 +80,7 @@ class _BookingConfirmationState extends ConsumerState<BookingConfirmation> {
         userId: currentUser.uid,
         doctorId: widget.doctor.id,
         date: finalDateTime,
-        status: AppLocalizations.of(context)!.pending,
+        status: 'قيد الانتظار',
         price: widget.doctor.price,
         notes: _notesController.text.trim().isEmpty
             ? null

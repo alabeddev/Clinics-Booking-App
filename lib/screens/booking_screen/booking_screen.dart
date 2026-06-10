@@ -24,18 +24,21 @@ class _BookingScreenState extends ConsumerState<BookingScreen> {
   Widget build(BuildContext context) {
     final allBookings = ref.watch(bookingsProvider);
     final upcomingBookings = allBookings.where((b) {
-      final status = b.status.trim();
-      return status == AppLocalizations.of(context)!.pending ||
-          status == AppLocalizations.of(context)!.confirmed;
+      final status = b.status.trim().toLowerCase();
+      return status == 'Pending' ||
+          status == 'Confirmed' ||
+          status == 'قيد الانتظار' ||
+          status == 'قيد الأنتظار';
     }).toList();
 
-    upcomingBookings.sort((a, b) => b.date.compareTo(a.date));
+    upcomingBookings.sort((a, b) => a.date.compareTo(b.date));
 
     final pastBookings = allBookings.where((b) {
       final status = b.status.trim();
-      return status == AppLocalizations.of(context)!.completed ||
-          status == AppLocalizations.of(context)!.canceled ||
-          status == AppLocalizations.of(context)!.canceledWithMaksoura;
+      return status == 'Completed' ||
+          status == 'Canceled' ||
+          status == 'ملغي' ||
+          status == 'ملغى';
     }).toList();
 
     pastBookings.sort((a, b) => b.date.compareTo(a.date));

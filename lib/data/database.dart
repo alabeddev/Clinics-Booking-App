@@ -57,33 +57,6 @@ class DatabaseHelper {
     ''');
   }
 
-  Future<void> insertNotification(NotificationModel notification) async {
-    final db = await instance.database;
-
-    await db.insert(
-      'notifications',
-      notification.toMap(),
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-  }
-
-  Future<List<NotificationModel>> getUserNotifications(String uid) async {
-    final db = await instance.database;
-    final result = await db.query(
-      'notifications',
-      where: 'userId = ?',
-      whereArgs: [uid],
-      orderBy: 'createdAt DESC',
-    );
-
-    return result.map((json) => NotificationModel.fromMap(json)).toList();
-  }
-
-  Future<int> deleteNotification(String id) async {
-    final db = await instance.database;
-    return await db.delete('notifications', where: 'id = ?', whereArgs: [id]);
-  }
-
   Future<void> insertUser(UserModel user) async {
     final db = await instance.database;
 
@@ -140,6 +113,33 @@ class DatabaseHelper {
     final db = await instance.database;
 
     return await db.delete('bookings', where: 'id = ?', whereArgs: [id]);
+  }
+
+  Future<void> insertNotification(NotificationModel notification) async {
+    final db = await instance.database;
+
+    await db.insert(
+      'notifications',
+      notification.toMap(),
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  Future<List<NotificationModel>> getUserNotifications(String uid) async {
+    final db = await instance.database;
+    final result = await db.query(
+      'notifications',
+      where: 'userId = ?',
+      whereArgs: [uid],
+      orderBy: 'createdAt DESC',
+    );
+
+    return result.map((json) => NotificationModel.fromMap(json)).toList();
+  }
+
+  Future<int> deleteNotification(String id) async {
+    final db = await instance.database;
+    return await db.delete('notifications', where: 'id = ?', whereArgs: [id]);
   }
 
   /* Future close() async {
